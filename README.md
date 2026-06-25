@@ -140,8 +140,8 @@ BLoC mengubah State
    ▼
 UI ter-render ulang (rebuild)
 ```
-
-(assets/screenshots/diagram.png)
+**Diagram Alur Data**
+![Diagram Alur](assets/screenshots/diagram.png)
 ---
 
 ## ☁️ Informasi Backend
