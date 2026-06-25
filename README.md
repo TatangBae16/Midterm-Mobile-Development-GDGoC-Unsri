@@ -141,8 +141,6 @@ BLoC mengubah State
 UI ter-render ulang (rebuild)
 ```
 
-> 💡 *Disarankan menambahkan diagram arsitektur visual (misalnya dibuat dengan draw.io / Excalidraw / Mermaid) dan menyisipkannya sebagai gambar di bagian ini untuk meningkatkan kualitas dokumentasi.*
-
 ---
 
 ## ☁️ Informasi Backend
@@ -393,21 +391,31 @@ SUPABASE_URL=https://ptupbuqrlidyrdydtqgh.supabase.co
 SUPABASE_ANON_KEY=masukkan_kunci_anon_di_sini
 ```
 
-> ⚠️ **Penting:** Jangan pernah meng-*commit* berkas `.env` ke repository publik. Pastikan `.env` sudah terdaftar di dalam `.gitignore`.
-
 ---
 
 ## 🖼️ Cuplikan Aplikasi (Screenshots)
 
-| Splash & Login | Katalog Produk | Detail Produk |
-|---|---|---|
-| *(tempel screenshot di sini)* | *(tempel screenshot di sini)* | *(tempel screenshot di sini)* |
+### 👤 Tampilan Pengguna (User)
 
-| Wishlist | Keranjang | Checkout & Riwayat |
+| Halaman Login | Katalog Produk | Detail Produk |
 |---|---|---|
-| *(tempel screenshot di sini)* | *(tempel screenshot di sini)* | *(tempel screenshot di sini)* |
+| ![Login](assets/screenshots/login.png) | ![Katalog Produk](assets/screenshots/catalog.png) | ![Detail Produk](assets/screenshots/product_detail.png) |
 
-> 💡 *Disarankan menambahkan GIF demo alur aplikasi (misalnya dari login → katalog → checkout) menggunakan tools seperti ScreenToGif/Kap agar penilaian dokumentasi mendapat nilai maksimal pada kategori "Sangat Bagus".*
+| Halaman Wishlist | Keranjang | Checkout |
+|---|---|---|
+| ![Wishlist](assets/screenshots/wishlist.png) | ![Keranjang](assets/screenshots/cart.png) | ![Checkout](assets/screenshots/checkout.png) |
+
+| Riwayat Transaksi (User) | Profil User |
+|---|---|
+| ![Riwayat Transaksi](assets/screenshots/order_history.png) | ![Profil User](assets/screenshots/profile.png) |
+
+### 🛡️ Tampilan Admin
+
+| Admin Dashboard | Form Kelola Barang | Transaksi Semua User (Admin) |
+|---|---|---|
+| ![Admin Dashboard](assets/screenshots/admin_dashboard.png) | ![Form Kelola Barang](assets/screenshots/admin_form_product.png) | ![Transaksi Semua User](assets/screenshots/admin_all_transactions.png) |
+
+> 💡 *Disarankan menambahkan GIF demo alur aplikasi (login → katalog → checkout) untuk melengkapi dokumentasi.*
 
 ---
 
@@ -436,9 +444,9 @@ Seluruh riwayat *commit* pada proyek ini mengikuti standar **[Conventional Commi
 
 ## 👤 Kontributor
 
-| Nama | NIM | Peran |
-|---|---|---|
-| *(isi nama)* | *(isi NIM)* | Developer |
+| Nama                    | NIM              | Peran |
+|-------------------------|------------------|---|
+| *TARUNA RAJASA IRYAWAN* | *09021282328071* | Developer |
 
 ---
 
