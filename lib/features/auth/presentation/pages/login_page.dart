@@ -32,7 +32,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Hapus warna background solid, kita ganti dengan gradien di body
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -85,7 +84,6 @@ class _LoginPageState extends State<LoginPage> {
               return Center(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(24.0),
-                  // 👇 EFEK GLASSMORPHISM DIMULAI DI SINI 👇
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: BackdropFilter(
@@ -188,7 +186,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             const SizedBox(height: 16),
 
-                            // 👇 TOMBOL GOOGLE SIGN-IN 👇
+                            // TOMBOL GOOGLE SIGN-IN
                             SizedBox(
                               width: double.infinity,
                               height: 55,

@@ -139,7 +139,6 @@ class _CartPageState extends State<CartPage> {
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(16),
-      // 👇 2. GANTI BOX DECORATION-NYA MENJADI INI 👇
       decoration: BoxDecoration(
         color: theme.cardColor,
         borderRadius: BorderRadius.circular(20),
@@ -160,7 +159,6 @@ class _CartPageState extends State<CartPage> {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: CachedNetworkImage(
-              // 👇 SUDAH DIPERBAIKI: Menggunakan variabel $productId 👇
               imageUrl: (product['image_url'] != null && product['image_url'].toString().isNotEmpty)
                   ? product['image_url']
                   : 'https://picsum.photos/seed/${product['id']}/400',

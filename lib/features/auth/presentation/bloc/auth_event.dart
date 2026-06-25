@@ -17,5 +17,4 @@ class LogoutRequested extends AuthEvent {}
 
 class AuthCheckRequested extends AuthEvent {}
 
-// Tambahkan di dalam file auth_event.dart
 class GoogleSignInRequested extends AuthEvent {}

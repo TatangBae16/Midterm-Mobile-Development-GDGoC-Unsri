@@ -20,8 +20,6 @@ class BiometricHelper {
     try {
       return await _auth.authenticate(
         localizedReason: 'Gunakan sidik jari untuk masuk ke GearShift',
-        // HAPUS semua parameter options, stickyAuth, atau biometricOnly
-        // Cukup gunakan localizedReason saja.
       );
     } catch (e) {
       return false;

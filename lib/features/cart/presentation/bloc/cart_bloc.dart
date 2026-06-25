@@ -37,7 +37,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     });
 
     on<UpdateQuantityRequested>((event, emit) async {
-      // 1. UPDATE UI SECARA OPTIMIS (INSTAN)
       // Kita cek apakah layar saat ini sedang menampilkan keranjang (CartLoaded)
       if (state is CartLoaded) {
         final currentState = state as CartLoaded;
@@ -64,9 +63,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
         // Biarkan HP mengabari Supabase secara diam-diam di balik layar
         await repository.updateQuantity(event.cartId, event.newQuantity);
 
-        // ❌ HAPUS: add(FetchCartRequested());
-        // Kita tidak memanggil ini lagi karena data di layar dan di database
-        // sudah sama-sama update. Memanggil ini hanya akan membuat layar berkedip loading lagi.
 
       } catch (e) {
         // Jika internet tiba-tiba putus, kembalikan error
@@ -88,10 +84,9 @@ class CartBloc extends Bloc<CartEvent, CartState> {
         final user = Supabase.instance.client.auth.currentUser;
         if (user == null) throw Exception("User belum login");
 
-        // TAMBAHKAN PRINT INI UNTUK BUKTI
+        // PRINT INI UNTUK BUKTI
         print("🚨 BLOC BERJALAN: Memanggil fungsi checkout!");
 
-        // Pastikan tulisannya 'checkout', BUKAN 'clearCart'
         await repository.checkout(user.id);
 
         add(FetchCartRequested());

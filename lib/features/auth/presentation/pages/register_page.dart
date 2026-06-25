@@ -195,7 +195,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                             const SizedBox(height: 16),
 
-                            // 👇 TOMBOL DAFTAR VIA GOOGLE 👇
+                            // TOMBOL DAFTAR VIA GOOGLE
                             SizedBox(
                               width: double.infinity,
                               height: 55,

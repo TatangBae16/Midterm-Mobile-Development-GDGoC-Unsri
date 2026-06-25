@@ -9,8 +9,6 @@ import '../../../product/presentation/pages/catalog_page.dart';
 import '../../../profile/data/repositories/profile_repository_impl.dart';
 import '../../../profile/presentation/bloc/profile_bloc.dart';
 
-// import 'profile_page.dart'; // Nanti di-uncomment setelah file dibuat
-// import 'order_history_page.dart'; // Nanti di-uncomment setelah file dibuat
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

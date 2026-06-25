@@ -8,7 +8,7 @@ import '../../domain/repositories/order_repository.dart';
 class OrderRepositoryImpl implements OrderRepository {
   final SupabaseClient _supabaseClient;
 
-  // 👇 JANGAN LUPA MASUKKAN SERVER KEY-MU DI SINI 👇
+  // MASUKKAN SERVER KEY-MU DI SINI
   String get _midtransServerKey => dotenv.env['MIDTRANS_SERVER_KEY'] ?? '';
 
   OrderRepositoryImpl(this._supabaseClient);
@@ -27,7 +27,7 @@ class OrderRepositoryImpl implements OrderRepository {
     }
   }
 
-  // 👇 IMPLEMENTASI FUNGSI CHECKOUT 👇
+  // IMPLEMENTASI FUNGSI CHECKOUT
   @override
   Future<String> createOrderAndGetPaymentUrl({
     required String userId,

@@ -139,7 +139,6 @@ class _ProfilePageState extends State<ProfilePage> {
           if (state is ProfileLoaded) {
             final user = state.user;
 
-            // Sesuai dengan key yang sukses tersimpan di userMetadata milikmu sebelumnya
             final userName = user.userMetadata?['full_name'] ?? 'Pengguna GearShift';
             final userEmail = user.email ?? 'pengguna@email.com';
             final avatarUrl = user.userMetadata?['avatar_url'];

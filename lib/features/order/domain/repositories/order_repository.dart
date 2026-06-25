@@ -12,5 +12,5 @@ abstract class OrderRepository {
 
   Future<String> checkPaymentStatus(String orderId);
 
-  Future<List<dynamic>> getAllOrders(); // Tambahkan fungsi baru ini
+  Future<List<dynamic>> getAllOrders();
 }

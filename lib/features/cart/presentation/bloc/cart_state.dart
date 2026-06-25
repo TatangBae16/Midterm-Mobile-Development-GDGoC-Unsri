@@ -16,7 +16,6 @@ class CartLoaded extends CartState {
 
   const CartLoaded(this.cartItems);
 
-  // KUNCI EFISIENSI: Flutter sekarang bisa membandingkan isi List ini.
   // Jika isinya persis sama, proses re-render akan dibatalkan secara otomatis!
   @override
   List<Object?> get props => [cartItems];

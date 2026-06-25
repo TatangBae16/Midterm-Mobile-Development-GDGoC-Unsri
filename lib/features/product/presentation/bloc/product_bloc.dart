@@ -25,7 +25,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     });
 
     // ==========================================
-    // 👇 3 HANDLER KHUSUS ADMIN (CRUD) 👇
+    // 3 HANDLER KHUSUS ADMIN (CRUD)
     // ==========================================
 
     // 2. HANDLER TAMBAH PRODUK

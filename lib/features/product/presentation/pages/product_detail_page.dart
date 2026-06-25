@@ -9,7 +9,6 @@ import '../bloc/quantity_state.dart';
 import '../../../cart/presentation/bloc/cart_bloc.dart';
 import '../../../cart/presentation/bloc/cart_event.dart';
 
-// 👇 IMPORT BLOC WISHLIST 👇
 import '../../../wishlist/presentation/bloc/wishlist_bloc.dart';
 import '../../../wishlist/presentation/bloc/wishlist_event.dart';
 import '../../../wishlist/presentation/bloc/wishlist_state.dart';
@@ -60,7 +59,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               ),
             ),
 
-            // 👇 WISH LIST COMPONENT (IKON HATI) DI SINI 👇
             actions: [
               Padding(
                 padding: const EdgeInsets.only(right: 12.0),

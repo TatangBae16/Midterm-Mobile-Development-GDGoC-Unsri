@@ -11,12 +11,6 @@ import '../bloc/wishlist_event.dart';
 import '../bloc/wishlist_state.dart';
 import 'package:shimmer/shimmer.dart';
 
-// TODO: 1. Jangan lupa import CartBloc jika namanya berbeda
-// import '../../cart/presentation/bloc/cart_bloc.dart';
-// import '../../cart/presentation/bloc/cart_event.dart';
-
-// TODO: 2. Import halaman ProductDetailPage kamu
-// import '../../product/presentation/pages/product_detail_page.dart';
 
 class WishlistPage extends StatefulWidget {
   const WishlistPage({super.key});
@@ -110,7 +104,7 @@ class _WishlistPageState extends State<WishlistPage> {
 
                 final isDark = theme.brightness == Brightness.dark;
 
-                // 👇 MENGGUNAKAN CARD & INKWELL AGAR BISA DIKLIK 👇
+                // MENGGUNAKAN CARD & INKWELL AGAR BISA DIKLIK
                 return Card(
                   elevation: 8,
                   shadowColor: isDark ? Colors.black.withOpacity(0.5) : Colors.black.withOpacity(0.05),
@@ -136,7 +130,7 @@ class _WishlistPageState extends State<WishlistPage> {
                           ),
                         ),
                       ).then((_) {
-                        // 👇 TAMBAHKAN INI: Perintahkan BLoC untuk memuat ulang daftar wishlist
+                        // Perintahkan BLoC untuk memuat ulang daftar wishlist
                         // saat pengguna menekan tombol Back dari halaman Detail
                         if (context.mounted) {
                           context.read<WishlistBloc>().add(FetchWishlist());
@@ -179,7 +173,7 @@ class _WishlistPageState extends State<WishlistPage> {
                               ),
                               const SizedBox(height: 12),
 
-                              // 👇 DUA TOMBOL BARU: KERANJANG DAN HAPUS 👇
+                              // DUA TOMBOL BARU: KERANJANG DAN HAPUS
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
@@ -189,7 +183,7 @@ class _WishlistPageState extends State<WishlistPage> {
                                       // 1. Panggil CartBloc untuk menambah ke keranjang
                                       context.read<CartBloc>().add(AddToCartRequested(productId: product['id']));
 
-                                      // 👇 2. Panggil WishlistBloc untuk MENGHAPUS barang ini dari wishlist
+                                      // 2. Panggil WishlistBloc untuk MENGHAPUS barang ini dari wishlist
                                       context.read<WishlistBloc>().add(ToggleWishlistEvent(product['id']));
 
                                       // 3. Refresh data wishlist di layar agar kotaknya langsung hilang

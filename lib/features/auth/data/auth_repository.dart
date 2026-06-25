@@ -1,6 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-// 👇 1. Pastikan import ProfileModel-nya sesuai dengan letak folder di proyekmu
 import 'models/profile_model.dart';
 
 class AuthRepository {
@@ -45,7 +44,7 @@ class AuthRepository {
   }
 
   // ==========================================
-  // 👇 2. FUNGSI BARU UNTUK MENGAMBIL ROLE ADMIN/USER 👇
+  // 2. FUNGSI BARU UNTUK MENGAMBIL ROLE ADMIN/USER
   // ==========================================
   Future<ProfileModel> getUserProfile(String userId) async {
     try {

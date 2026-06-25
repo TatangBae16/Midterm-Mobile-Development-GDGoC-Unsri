@@ -10,9 +10,9 @@ class AuthLoading extends AuthState {}
 
 class Authenticated extends AuthState {
   final User user;
-  final ProfileModel profile; // 👇 Tambahan properti profil
+  final ProfileModel profile;
 
-  Authenticated(this.user, this.profile); // 👇 Tambahkan di konstruktor
+  Authenticated(this.user, this.profile);
 }
 
 class Unauthenticated extends AuthState {}

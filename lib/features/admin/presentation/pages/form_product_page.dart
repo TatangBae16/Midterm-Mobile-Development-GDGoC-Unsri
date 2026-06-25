@@ -76,7 +76,6 @@ class _FormProductPageState extends State<FormProductPage> {
       final fileExt = _imageFile!.path.split('.').last;
       final fileName = 'komponen_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
 
-      // Pastikan kamu punya bucket bernama 'product-images' yang Public di Supabase Storage
       await Supabase.instance.client.storage
           .from('product-images')
           .upload(fileName, _imageFile!);

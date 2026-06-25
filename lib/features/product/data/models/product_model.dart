@@ -17,7 +17,7 @@ class ProductModel {
     required this.imageUrl,
   });
 
-  // Fungsi yang sudah kamu miliki (Mengubah JSON dari internet menjadi Objek Flutter)
+  // Fungsi (Mengubah JSON dari internet menjadi Objek Flutter)
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
       id: json['id'],
@@ -30,7 +30,7 @@ class ProductModel {
     );
   }
 
-  // Fungsi baru (Mengubah Objek Flutter menjadi JSON untuk disimpan di memori HP)
+  // Fungsim (Mengubah Objek Flutter menjadi JSON untuk disimpan di memori HP)
   Map<String, dynamic> toJson() {
     return {
       'id': id,

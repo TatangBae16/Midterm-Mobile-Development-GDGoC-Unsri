@@ -31,7 +31,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
     return 'Rp ${number.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]}.')}';
   }
 
-  // 👇 Sedikit penyesuaian agar mengenali status dari Midtrans 👇
+  // penyesuaian agar mengenali status dari Midtrans
   Color _getStatusColor(String status) {
     final s = status.toLowerCase();
     if (s.contains('pending')) return Colors.orange;
@@ -88,13 +88,12 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                   final List<dynamic> items = order['items_json'] ?? [];
                   final String status = order['status'] ?? 'Pending';
 
-                  // 👇 1. Tambahkan detektor tema di sini 👇
+                  // Tambahkan detektor tema di sini
                   final isDark = theme.brightness == Brightness.dark;
 
                   return Container(
                     margin: const EdgeInsets.only(bottom: 16),
                     padding: const EdgeInsets.all(16),
-                    // 👇 2. GANTI BOX DECORATION-NYA MENJADI INI 👇
                     decoration: BoxDecoration(
                       color: theme.cardColor,
                       borderRadius: BorderRadius.circular(20),
@@ -142,7 +141,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                             final item = items[itemIndex];
 
                             // ==========================================
-                            // LOGIKA PEMBACAAN JSON YANG BARU
+                            // LOGIKA PEMBACAAN JSON
                             // ==========================================
                             final productData = item['products'] ?? {};
                             final String productName = productData['name'] ?? item['product_name'] ?? 'Produk';
@@ -183,7 +182,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                         ),
 
                         // ==========================================
-                        // 👇 TOMBOL CEK STATUS DITAMBAHKAN DI SINI 👇
+                        // TOMBOL CEK STATUS
                         // ==========================================
                         if (status.toLowerCase().contains('pending')) ...[
                           const SizedBox(height: 16),

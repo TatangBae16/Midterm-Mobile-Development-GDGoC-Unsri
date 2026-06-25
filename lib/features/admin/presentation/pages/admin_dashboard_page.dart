@@ -7,7 +7,7 @@ import '../../../auth/presentation/bloc/auth_bloc.dart';
 import '../../../auth/presentation/bloc/auth_event.dart';
 import '../../../auth/presentation/pages/login_page.dart';
 
-// 👇 TAMBAHKAN IMPORT BLOC PRODUK DI SINI 👇
+
 import '../../../order/presentation/bloc/order_bloc.dart';
 import '../../../order/presentation/bloc/order_event.dart';
 import '../../../order/presentation/bloc/order_state.dart';
@@ -340,7 +340,7 @@ class _AllTransactionsTabState extends State<_AllTransactionsTab> {
     return 'Rp ${number.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]}.')}';
   }
 
-  // 👇 HELPER BARU UNTUK WARNA STATUS 👇
+  // HELPER BARU UNTUK WARNA STATUS
   Color _getStatusColor(String status) {
     switch (status.toLowerCase()) {
       case 'payment success':
@@ -392,7 +392,6 @@ class _AllTransactionsTabState extends State<_AllTransactionsTab> {
                 child: ListTile(
                   leading: const CircleAvatar(child: Icon(Icons.person)),
                   title: Text("ID: ${order['id']}", style: const TextStyle(fontWeight: FontWeight.bold)),
-                  // 👇 SUBTITLE DIUBAH AGAR BISA WARNA-WARNI 👇
                   subtitle: Padding(
                     padding: const EdgeInsets.only(top: 4.0),
                     child: Column(

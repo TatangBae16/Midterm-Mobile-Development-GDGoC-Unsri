@@ -5,7 +5,6 @@ import '../bloc/auth_bloc.dart';
 import '../bloc/auth_event.dart';
 import '../bloc/auth_state.dart';
 
-// TODO: Sesuaikan import halaman ini dengan letak file aslinya di projectmu
 import 'login_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -45,8 +44,6 @@ class _SplashPageState extends State<SplashPage> {
         }
       },
       child: Scaffold(
-        // Scaffold tidak lagi menggunakan backgroundColor solid,
-        // melainkan dibungkus Container dengan BoxDecoration di bawah ini
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -58,8 +55,6 @@ class _SplashPageState extends State<SplashPage> {
                 Color(0xFF0F2027), // Tema gelap otomotif
                 Color(0xFF203A43),
                 Color(0xFF2C5364), // Warna paling gelap di sudut kanan bawah
-                // Note: Kalau mau disamakan persis dengan LoginPage,
-                // tinggal ganti ketiga kode Hex di atas ya!
               ],
             ),
           ),
@@ -69,7 +64,7 @@ class _SplashPageState extends State<SplashPage> {
               children: [
                 // 👇 LOGO APLIKASI 👇
                 Image.asset(
-                  'assets/images/Logoku.png', // Sesuai dengan file gambarmu
+                  'assets/images/Logoku.png',
                   width: 450,
                   height: 450,
                 ),
@@ -90,7 +85,7 @@ class _SplashPageState extends State<SplashPage> {
 
                 // 👇 LOADING ANIMATOR 👇
                 const CircularProgressIndicator(
-                  color: Colors.white, // Diubah jadi putih agar kontras dengan gradient
+                  color: Colors.white,
                   strokeWidth: 3,
                 ),
               ],

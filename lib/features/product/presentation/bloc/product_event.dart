@@ -18,7 +18,6 @@ class FetchProductsEvent extends ProductEvent {
   const FetchProductsEvent({this.query, this.category});
 
   @override
-  // 👇 Masukkan KEDUA properti ke dalam props 👇
   List<Object?> get props => [query, category];
 }
 

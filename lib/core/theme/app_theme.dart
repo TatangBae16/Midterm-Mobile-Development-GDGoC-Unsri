@@ -22,7 +22,7 @@ class AppTheme {
         surface: Colors.white,
         onSurface: Color(0xFF1A1A1A),                  // Hitam elegan (tidak terlalu pekat)
       ),
-      // 👇 SUNTIKAN FONT PREMIUM MONTSERRAT 👇
+
       textTheme: GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,

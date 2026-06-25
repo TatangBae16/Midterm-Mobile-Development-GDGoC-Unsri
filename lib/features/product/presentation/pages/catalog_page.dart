@@ -34,7 +34,7 @@ class _CatalogPageState extends State<CatalogPage> {
   final TextEditingController _searchController = TextEditingController();
   Timer? _debounce;
 
-  // 👇 1. Tambahkan Daftar Kategori dan Status Aktif 👇
+  // Daftar Kategori dan Status Aktif
   final List<String> categories = [
     'Semua', 'Mesin', 'Pengabutan', 'Transmisi',
     'Kelistrikan', 'Pengereman', 'Kaki-kaki', 'Pelumas', 'Aksesoris'
@@ -61,7 +61,7 @@ class _CatalogPageState extends State<CatalogPage> {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
 
     _debounce = Timer(const Duration(milliseconds: 500), () {
-      // 👇 2. Kirim query pencarian DAN kategori yang sedang aktif 👇
+      // Kirim query pencarian DAN kategori yang sedang aktif
       context.read<ProductBloc>().add(FetchProductsEvent(
           query: query,
           category: selectedCategory
@@ -190,7 +190,7 @@ class _CatalogPageState extends State<CatalogPage> {
             ),
 
             // ==========================================
-            // 👇 FILTER KATEGORI (HORIZONTAL SCROLL) 👇
+            // FILTER KATEGORI (HORIZONTAL SCROLL)
             // ==========================================
             SizedBox(
               height: 50,
@@ -315,7 +315,6 @@ class _CatalogPageState extends State<CatalogPage> {
         ),
       ),
       child: Container(
-        // Margin bottom dihilangkan karena spasi sudah diatur oleh mainAxisSpacing GridView
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: theme.cardColor,
@@ -338,7 +337,6 @@ class _CatalogPageState extends State<CatalogPage> {
               child: ClipRRect(
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
                 child: CachedNetworkImage(
-                  // 👇 SUDAH DIPERBAIKI: Menggunakan product.id agar gambar bervariasi 👇
                   imageUrl: product.imageUrl.isNotEmpty
                       ? product.imageUrl
                       : 'https://picsum.photos/seed/${product.id}/400',

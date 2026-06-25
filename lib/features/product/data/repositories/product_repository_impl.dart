@@ -66,14 +66,13 @@ class ProductRepositoryImpl implements ProductRepository {
     }
   }
   // ==========================================
-  // 👇 IMPLEMENTASI FUNGSI ADMIN 👇
+  // IMPLEMENTASI FUNGSI ADMIN
   // ==========================================
 
   @override
   Future<void> addProduct(ProductModel product) async {
     try {
       final data = product.toJson();
-      // Hapus 'id' dari data karena Supabase akan membuatkan ID otomatis (Auto-increment)
       data.remove('id');
 
       await dioClient.dio.post('/products', data: data);

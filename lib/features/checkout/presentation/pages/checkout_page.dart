@@ -124,7 +124,6 @@ class CheckoutPage extends StatelessWidget {
                         ),
                         const SizedBox(height: 16),
 
-                        // Perhatikan tombol ini, sekarang dia memanggil BLoC Order
                         BlocBuilder<OrderBloc, OrderState>(
                           builder: (context, orderState) {
                             final isLoading = orderState is OrderCheckoutLoading;

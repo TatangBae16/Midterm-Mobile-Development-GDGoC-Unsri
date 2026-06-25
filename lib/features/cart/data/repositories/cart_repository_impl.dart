@@ -14,7 +14,6 @@ class CartRepositoryImpl implements CartRepository {
   Future<List<dynamic>> fetchCartItems(String userId) async {
     final prefs = await SharedPreferences.getInstance();
 
-    // KUNCI RAHASIA: Gunakan userId sebagai bagian dari key agar keranjang tiap user aman dan tidak tertukar!
     final String cacheKey = 'CACHED_CART_ITEMS_$userId';
 
     try {

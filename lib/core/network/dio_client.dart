@@ -16,7 +16,7 @@ class DioClient {
     // 2. Konfigurasi Dasar Dio
     _dio = Dio(
       BaseOptions(
-        baseUrl: baseUrl, // Sekarang otomatis menjadi https://[proyek].supabase.co/rest/v1
+        baseUrl: baseUrl,
         connectTimeout: const Duration(seconds: 10),
         receiveTimeout: const Duration(seconds: 10),
         responseType: ResponseType.json,

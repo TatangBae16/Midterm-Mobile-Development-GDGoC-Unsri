@@ -26,7 +26,6 @@ import 'features/auth/presentation/pages/login_page.dart';
 import 'features/wishlist/data/repositories/wishlist_repository_impl.dart';
 import 'features/wishlist/presentation/bloc/wishlist_bloc.dart';
 
-// Pastikan ini diletakkan di paling atas, di luar class MyApp
 ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
 
 void main() async {
@@ -84,7 +83,6 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<OrderBloc>(
           create: (context) => OrderBloc(orderRepository),
-          // Pastikan 'orderRepository' sudah didefinisikan/di-inject sebelumnya
         ),
       ],
 
@@ -96,7 +94,6 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             themeMode: currentMode,
 
-            // 2. Panggil file tema khusus secara ringkas di sini:
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
 
