@@ -201,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
                                   height: 24,
                                   errorBuilder: (context, error, stackTrace) => const Icon(Icons.g_mobiledata, color: Colors.white, size: 30),
                                 ),
-                                label: const Text('Masuk dengan Google', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600)),
+                                label: const Text('Masuk dengan Google', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                 onPressed: () {
                                   context.read<AuthBloc>().add(GoogleSignInRequested());
                                 },
@@ -214,7 +214,7 @@ class _LoginPageState extends State<LoginPage> {
                               onPressed: () {
                                 Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterPage()));
                               },
-                              child: const Text('Belum punya akun? Daftar di sini', style: TextStyle(color: Colors.white)),
+                              child: const Text('Belum punya akun? Daftar di sini', style: TextStyle(color: Colors.white, fontSize: 13)),
                             ),
 
                             // ==========================================

@@ -210,7 +210,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   height: 24,
                                   errorBuilder: (context, error, stackTrace) => const Icon(Icons.g_mobiledata, color: Colors.white, size: 30),
                                 ),
-                                label: const Text('Daftar dengan Google', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600)),
+                                label: const Text('Daftar dengan Google', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                 onPressed: () {
                                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Fitur Google Sign-Up segera hadir!')));
                                 },

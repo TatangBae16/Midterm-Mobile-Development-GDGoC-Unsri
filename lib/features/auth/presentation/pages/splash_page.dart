@@ -75,7 +75,7 @@ class _SplashPageState extends State<SplashPage> {
                   'Powering Every Ride',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 32,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                     // fontStyle: FontStyle.italic,
                     letterSpacing: 2,
