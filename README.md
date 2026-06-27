@@ -389,10 +389,14 @@ flutter build apk --release
 Buat sebuah berkas baru bernama **`.env`** di root direktori proyek (sejajar dengan berkas `pubspec.yaml`), lalu isi dengan kredensial Supabase Anda:
 
 ```env
-SUPABASE_URL=https://ptupbuqrlidyrdydtqgh.supabase.co
+SUPABASE_URL=masukkan_url_disini
 SUPABASE_ANON_KEY=masukkan_kunci_anon_di_sini
+MIDTRANS_SERVER_KEY=masukkan_kunci_server_di_sini
 ```
-
+**Penjelasan Variabel:**
+* **`SUPABASE_URL`**: Alamat utama (*API Endpoint*) untuk menghubungkan aplikasi dengan *database* Supabase.
+* **`SUPABASE_ANON_KEY`**: Kunci akses publik yang wajib disertakan agar aplikasi memiliki izin untuk membaca dan menulis data di Supabase.
+* **`MIDTRANS_SERVER_KEY`**: Kunci otentikasi dari Midtrans untuk memproses transaksi dan gerbang pembayaran (*Payment Gateway*).
 ---
 
 ## 🖼️ Cuplikan Aplikasi (Screenshots)
